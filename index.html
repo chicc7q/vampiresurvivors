@@ -63,7 +63,7 @@ const charImgFiles={
 };
 for(const [k,src] of Object.entries(charImgFiles)){
   const img=new Image();
-  img.crossOrigin='anonymous';
+//img.crossOrigin='anonymous';
   img.onload=(function(key,im){return ()=>{charImages[key]=im;};})(k,img);
   img.onerror=(function(key,s){return ()=>{
     // retry once without crossOrigin (some mobile browsers block it)
